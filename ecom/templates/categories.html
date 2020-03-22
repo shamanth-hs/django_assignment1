@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% block container %}
+<style>
+#back-img{
+  width:1350px;
+  height:300px;
+}
+div.gallery {
+    padding:20px;
+    margin: 65px;
+    border: 1px solid #ccc;
+    border-radius:10px;
+    float: left;
+    width: 180px;
+    height:auto;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    top: -14px;
+  }
+  .container1{
+    display:block;
+    text-align:center;
+  }
+ 
+</style>
+    <div>
+       <img  id="back-img"src="https://www.itl.cat/pngfile/big/4-48377_hd-nature-wallpapers-desktop-images-4k-cool-natural.jpg">
+    </div>
+    <div class="container1">
+      {% for post in posts %}
+        <div class="gallery">
+          <a href="{{ post.id }}">
+            <img src="{{ post.image.url }}"  width="500" height="300">
+          </a>
+          <div class="desc">{{post.title}}
+          </div>
+          <div class="desc">{{post.description|truncatechars:100}}
+          </div>
+        </div>
+    </div>
+      
+  {% endfor %}
+{% endblock container %}

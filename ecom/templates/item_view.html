@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+<head>
+
+</head>
+{% block container %}
+<style>
+.imgcard{
+  width:200px;
+  height:200px;
+  position:relative;
+  left: 175px;
+    top: -502px;
+    z-index:-1;
+  
+}
+.content{
+ position: relative;
+    top: -994px;
+    left: 803px;
+    width:300px;
+ }
+.imgelements{
+  width:50px;
+  height:50px;
+  margin:15px;
+}
+.otherproduct{
+  position:relative;
+  top:-100px;
+  left:200px;
+    margin-left:20px;
+
+}
+
+.other{
+  width:auto;
+  height:200px;
+}
+</style>
+  <div>
+    <div>
+      <div>
+        <img class="imgelements" src="{{posts.image.url}}" alt="rose" style="width: 50px;height: 50px;" />
+      </div>
+      <div>
+        <img class="imgelements" src="{{posts.image.url}}" alt="rose" style="width: 100px;height: 100px;"/>
+      </div>
+      <div>
+        <img class="imgelements" src="{{posts.image.url}}" alt="rose" style="width: 100px;height: 100px;"/>
+      </div>
+     <div>
+        <img class="imgelements" src="{{posts.image.url}}" alt="rose" style="width: 100px;height: 100px;"/>
+      </div>
+      <div>
+        <img class="imgelements" src="{{posts.image.url}}" alt="rose" style="width: 100px;height: 100px;"/>
+      </div>
+    </div>
+    <img class="imgcard" src="{{posts.image.url}}" alt="rose" style="width: 500px;height: 500px;"/>
+  </div>
+  <div class="content">
+    <h3>{{posts.title}}</h3>
+    <p>{{posts.description}}</p>
+  </div>
+    {% endblock container %}
