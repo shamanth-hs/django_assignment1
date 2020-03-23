@@ -43,7 +43,7 @@ div.gallery {
     <div class="container1">
       {% for post in posts %}
         <div class="gallery">
-          <a href="{{ post.id }}">
+          <a href="categories/{{ post.id }}">
             <img src="{{ post.image.url }}"  width="500" height="300">
           </a>
           <div class="desc">{{post.title}}

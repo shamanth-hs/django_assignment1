@@ -5,6 +5,6 @@ from webapp.views import index,get_categories,get_items,get_item_view
 urlpatterns = [
     path('',index),
     path('categories',get_categories),
-    path('<int:id>',get_items),
-    path(r'items/<int:id>',get_item_view)
+    path(r'categories/<int:id>',get_items),
+    path(r'categories/items/<int:id>',get_item_view)
 ]
